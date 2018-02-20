@@ -1,0 +1,95 @@
+$path_dir: '../images/';
+
+@mixin generateBeforeIcon($imgName, $height, $width:$height, $alignTo:center, $bg-size: contain){
+  content:         '';
+  display:         inline-block;
+  background:      url( $path_dir + $imgName ) $alignTo no-repeat;
+  background-size: $bg-size !important;
+  width:           $width;
+  height:          $height;
+    @media only screen and (min-width: 992px){
+        margin: 0 11.5px;
+    }
+}
+
+.icon{
+    &:before{
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition:    all 0.5s ease-in-out;
+        -o-transition:      all 0.5s ease-in-out;
+        transition:         all 0.5s ease-in-out;
+    }
+
+    &-blog{
+        &:before{
+            @include generateBeforeIcon('blog.png', 16px, 34px);
+        }
+        &:hover{
+            &:before{
+                @include generateBeforeIcon('blog-red.png', 16px, 34px);
+            }
+        }
+    }//.icon-fb ends..
+
+    &-fb{
+        &:before{
+            @include generateBeforeIcon('facebook.png', 16px, 34px);
+        }
+        &:hover{
+            &:before{
+                @include generateBeforeIcon('facebook-red.png', 16px, 34px);
+            }
+        }
+    }//.icon-blog ends..
+
+    &-twitter{
+        &:before{
+            @include generateBeforeIcon('twitter.png', 16px, 34px);
+        }
+        &:hover{
+            &:before{
+                @include generateBeforeIcon('twitter-red.png', 16px, 34px);
+            }
+        }
+    }//.icon-twitter ends..
+
+    &-google{
+        &:before{
+            @include generateBeforeIcon('google.png', 16px, 34px);
+        }
+        &:hover{
+            &:before{
+                @include generateBeforeIcon('google-red.png', 16px, 34px);
+            }
+        }
+    }//.icon-google ends..
+
+    &-linkedin{
+        &:before{
+            @include generateBeforeIcon('linkedin.png', 16px, 34px);
+        }
+        &:hover{
+            &:before{
+                @include generateBeforeIcon('linkedin-red.png', 16px, 34px);
+            }
+        }
+    }//.icon-linkedin ends..
+
+     &-youtube{
+        &:before{
+            @include generateBeforeIcon('youtube.png', 16px, 34px);
+        }
+        &:hover{
+            &:before{
+                @include generateBeforeIcon('youtube-red.png', 16px, 34px);
+            }
+        }
+    }//.icon-linkedin ends..
+
+}//.icon ends..
+// size icons 
+i{
+    &.large{
+        font-size: 65px;
+    }
+}

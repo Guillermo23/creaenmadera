@@ -1,0 +1,50 @@
+{
+    "app": {
+      "html":{
+          "plantillas":[
+            "./public/**/*.html"
+          ]
+      },
+      "javascripts": {
+        "paths": [
+          "./node_modules/jquery/dist/jquery.js",
+          "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+          "./node_modules/bootstrap-sass/assets/javascripts/bootstrap.js",
+          "./node_modules/jquery.easing/*.js",
+          "./resources/assets/js/**/*.js"
+          ],
+        "pathJsApp": [
+
+        ],
+        "dest": "./public/js"
+      },
+      "stylesheets": {
+        "path": [
+          "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+          "./node_modules/font-awesome/css/font-awesome.min.css"
+        ],
+        "pathCssApp":[
+          "./resources/assets/sass/styles.scss"
+        ],
+        "pathCssWatch":[
+          "./resources/assets/sass/**/*.scss"
+        ],
+        "dest": "./public/css"
+      },
+      "img": {
+        "src": [
+          "./resources/assets/images/**/*.*"
+        ],
+        "dest": "./public/images"
+      },
+      "fonts": {
+        "pathFontsApp":[
+          "./node_modules/font-awesome/fonts/**/*.*",
+          "./resources/assets/fonts/**/*.*"
+        ],
+        "paths": [
+        ],
+        "dest": "./public/fonts"
+      }
+    }
+  }

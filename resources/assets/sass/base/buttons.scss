@@ -1,0 +1,52 @@
+//Space for buttons styles...
+.btn{
+  font-size: 0.8rem;
+
+  &:hover{
+      cursor: pointer;
+
+  }
+  &.medium{
+    padding: 10px 25px;
+  }
+  &.btn-raised{
+    &.btn-danger{
+        background-color: $reb-ribbon;
+        border-color:     $reb-ribbon;
+        &:hover, &:active, &:focus, &:visited{
+            background-color: darken($torch-red, 10%) !important;
+        }
+        &-1{
+            background-color: $torch-red;
+            border-color:     $torch-red;
+            color:#fff;
+            &:hover, &:active, &:focus, &:visited{
+                @extend .btn.btn-raised.btn-danger;
+               // background-color: darken($torch-red, 10%) !important;
+            }
+        }//.btn-danger-1 ends..
+    }//.btn-danger ends..
+    &.btn-default{
+        background-color: $btn-defaul;
+        border-color:     $btn-defaul;
+        color: #797979;
+        &:hover, &:active, &:focus, &:visited{
+            @extend .btn.btn-raised.btn-default;
+           // background-color: darken($torch-red, 10%) !important;
+        }
+    }
+    &.btn-warning{
+        background-color: $sunglow;
+        border-color:     $sunglow;
+        color:            $mine-shaft;
+        margin-top:       5px;
+        font-weight:      600;
+        text-transform:   inherit;
+
+        &:hover, &:active, &:focus, &:visited{
+            color: $mine-shaft;
+            background: darken($sunglow, 10%) !important;
+        }
+    }//.btn-danger ends..
+  }
+}//.btn ends..
