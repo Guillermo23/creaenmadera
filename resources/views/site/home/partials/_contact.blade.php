@@ -9,25 +9,26 @@
     </div>
     <div class="row">
       <div class="col-lg-12">
-        <form id="contactForm" name="sentMessage" novalidate>
+        <form id="contactForm" method="post" action="{{ action('HomeController@myTestMail') }}" accept-charset="UTF-8" name="sentMessage" novalidate>
+          {!! csrf_field() !!}
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <input class="form-control" id="name" type="text" placeholder="Tu Nombre *" required data-validation-required-message="El nombre es obligatorio.">
+                <input class="form-control" id="name" name="name" type="text" placeholder="Tu Nombre *" required data-validation-required-message="El nombre es obligatorio.">
                 <p class="help-block text-danger"></p>
               </div>
               <div class="form-group">
-                <input class="form-control" id="email" type="email" placeholder="Tu correo *" required data-validation-required-message="El correo es obligatorio.">
+                <input class="form-control" id="email" name="email" type="email" placeholder="Tu correo *" required data-validation-required-message="El correo es obligatorio.">
                 <p class="help-block text-danger"></p>
               </div>
               <div class="form-group">
-                <input class="form-control" id="phone" type="tel" placeholder="Tu telefono *" required data-validation-required-message="El telefono es obligatorio.">
+                <input class="form-control" id="phone" name="phone" type="tel" placeholder="Tu telefono *" required data-validation-required-message="El telefono es obligatorio.">
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <textarea class="form-control" id="message" placeholder="Tu mensaje *" required data-validation-required-message="Su mensaje es obligatorio."></textarea>
+                <textarea class="form-control" id="message" name="message" placeholder="Tu mensaje *" required data-validation-required-message="Su mensaje es obligatorio."></textarea>
                 <p class="help-block text-danger"></p>
               </div>
             </div>
